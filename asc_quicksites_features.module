@@ -1,0 +1,3 @@
+<?php
+
+include_once('asc_quicksites_features.features.inc');
