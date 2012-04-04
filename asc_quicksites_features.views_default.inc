@@ -5658,15 +5658,18 @@ function asc_quicksites_features_views_default_views() {
 
   $views[$view->name] = $view;
 
+
+
+
+
   // Exported view: front_page
   $view = new view;
   $view->name = 'front_page';
   $view->description = 'Front Page';
   $view->tag = '';
-  $view->view_php = '';
   $view->base_table = 'node';
-  $view->is_cacheable = FALSE;
-  $view->api_version = 2;
+  $view->core = 0;
+  $view->api_version = '2';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('fields', array(
@@ -5780,7 +5783,7 @@ function asc_quicksites_features_views_default_views() {
         'target' => '',
         'help' => '',
         'trim' => 0,
-        'max_length' => '',
+          'max_length' => '',
         'word_boundary' => 1,
         'ellipsis' => 1,
         'html' => 0,
@@ -5810,7 +5813,7 @@ function asc_quicksites_features_views_default_views() {
       'override' => array(
         'button' => 'Override',
       ),
-      'relationship' => 'none',
+        'relationship' => 'none',
     ),
   ));
   $handler->override_option('filters', array(
@@ -5850,7 +5853,7 @@ function asc_quicksites_features_views_default_views() {
       ),
       'relationship' => 'none',
     ),
-    'status' => array(
+      'status' => array(
       'operator' => '=',
       'value' => '1',
       'group' => '0',
@@ -5875,7 +5878,10 @@ function asc_quicksites_features_views_default_views() {
     'type' => 'none',
   ));
   $handler->override_option('items_per_page', 1);
-  $handler = $view->new_display('block', 'Front Page Block', 'block_1');
+  $handler = $view->new_display('block', 'Front Text Short', 'block_1');
+  $handler->override_option('block_description', '');
+  $handler->override_option('block_caching', -1);
+  $handler = $view->new_display('block', 'Front Text Tall', 'block_2');
   $handler->override_option('block_description', '');
   $handler->override_option('block_caching', -1);
 
