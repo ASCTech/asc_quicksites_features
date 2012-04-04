@@ -423,6 +423,7 @@ function asc_quicksites_features_views_default_views() {
   $handler->override_option('cache', array(
     'type' => 'none',
   ));
+  $handler->override_option('title', 'Events');
   $handler->override_option('header', '<h1><a href="events" title="Events page">Events</a></h1>');
   $handler->override_option('header_format', '1');
   $handler->override_option('header_empty', 1);
@@ -1889,7 +1890,7 @@ function asc_quicksites_features_views_default_views() {
   $handler->override_option('cache', array(
     'type' => 'none',
   ));
-  $handler->override_option('header', '<h1><a href="news" title="News page">News</a></h1>');
+  $handler->override_option('title', 'News');
   $handler->override_option('header_format', '1');
   $handler->override_option('header_empty', 1);
   $handler->override_option('footer', '<a href="news" title="News page">Recent News</a>');
@@ -4150,7 +4151,7 @@ function asc_quicksites_features_views_default_views() {
   $handler->override_option('cache', array(
     'type' => 'none',
   ));
-  $handler->override_option('header', '<h1><a href="directory" title="People page">People</a></h1>');
+  $handler->override_option('title', 'People');
   $handler->override_option('header_format', '1');
   $handler->override_option('header_empty', 1);
   $handler->override_option('footer', '<a href="directory" title="People page">A-Z Directory</a>');
