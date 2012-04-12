@@ -4700,6 +4700,7 @@ function asc_quicksites_features_views_default_views() {
       ),
     ),
   ));
+  $handler->override_option('title', '');
   $handler->override_option('css_class', 'filter');
   $handler->override_option('header', '<div class="views-row label">Filter by:</div>
 <div class="views-row">
