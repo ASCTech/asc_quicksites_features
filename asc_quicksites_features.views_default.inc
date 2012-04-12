@@ -584,7 +584,7 @@ function asc_quicksites_features_views_default_views() {
       'label' => '',
       'alter' => array(
         'alter_text' => 1,
-        'text' => '<a href="[path]" title="[title_2]"><img src=\'/sites/all/themes/quicksites/datebox/datebox.png.php?d=[field_ascevents_date_value]\' alt="[title_2]" title="[title_2]" width="48" height="44" /></a>',
+        'text' => '<a href="[path]" title="[title_2]"><img src=\'/sites/all/themes/quicksites/datebox/datebox.png.php?t=4&d=[field_ascevents_date_value]\' alt="[title_2]" title="[title_2]" width="40" height="45" /></a>',
         'make_link' => 0,
         'path' => '',
         'link_class' => '',
