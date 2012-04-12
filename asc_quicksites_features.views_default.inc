@@ -424,7 +424,7 @@ function asc_quicksites_features_views_default_views() {
     'type' => 'none',
   ));
   $handler->override_option('title', 'Events');
-  $handler->override_option('header', '<h1><a href="events" title="Events page">Events</a></h1>');
+  $handler->override_option('header', '');
   $handler->override_option('header_format', '1');
   $handler->override_option('header_empty', 1);
   $handler->override_option('footer', '<a href="events" title="Events page" class="calendarLink">More Events</a>');
