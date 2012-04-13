@@ -3010,7 +3010,7 @@ function asc_quicksites_features_views_default_views() {
       'relationship' => 'none',
     ),
   ));
-  $handler->override_option('css_class', 'feature feature-large feature-large-1');
+  $handler->override_option('css_class', 'feature-large feature-large-1');
   $handler->override_option('items_per_page', 2);
   $handler->override_option('use_pager', FALSE);
   $handler->override_option('block_description', '');
@@ -3417,7 +3417,7 @@ function asc_quicksites_features_views_default_views() {
       'relationship' => 'none',
     ),
   ));
-  $handler->override_option('css_class', 'feature feature-large feature-large-2');
+  $handler->override_option('css_class', 'feature-large feature-large-2');
   $handler->override_option('items_per_page', 1);
   $handler->override_option('use_pager', FALSE);
   $handler->override_option('block_description', '');
