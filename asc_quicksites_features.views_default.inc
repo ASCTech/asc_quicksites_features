@@ -11,10 +11,9 @@ function asc_quicksites_features_views_default_views() {
   $view->name = 'Events';
   $view->description = 'Events for Front Page';
   $view->tag = '';
-  $view->view_php = '';
   $view->base_table = 'node';
-  $view->is_cacheable = FALSE;
-  $view->api_version = 2;
+  $view->core = 0;
+  $view->api_version = '2';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('fields', array(
@@ -330,10 +329,10 @@ function asc_quicksites_features_views_default_views() {
       'field' => 'date_argument',
       'validate_user_argument_type' => 'uid',
       'validate_user_roles' => array(
-        '2' => 0,
-        '5' => 0,
-        '4' => 0,
-        '3' => 0,
+        2 => 0,
+        5 => 0,
+        4 => 0,
+        3 => 0,
       ),
       'override' => array(
         'button' => 'Override',
@@ -424,7 +423,6 @@ function asc_quicksites_features_views_default_views() {
     'type' => 'none',
   ));
   $handler->override_option('title', 'Events');
-  $handler->override_option('header', '');
   $handler->override_option('header_format', '1');
   $handler->override_option('header_empty', 1);
   $handler->override_option('footer', '<a href="events" title="Events page" class="calendarLink">More Events</a>');
@@ -987,7 +985,6 @@ function asc_quicksites_features_views_default_views() {
     ),
   ));
   $handler->override_option('title', 'Events Calendar');
-  $handler->override_option('header', '');
   $handler->override_option('footer', '');
   $handler->override_option('empty', '<div style="text-align: center;">No events.</div>');
   $handler->override_option('style_plugin', 'table');
@@ -1119,10 +1116,10 @@ function asc_quicksites_features_views_default_views() {
       'field' => 'date_argument',
       'validate_user_argument_type' => 'uid',
       'validate_user_roles' => array(
-        '2' => 0,
-        '5' => 0,
-        '4' => 0,
-        '3' => 0,
+        2 => 0,
+        5 => 0,
+        4 => 0,
+        3 => 0,
       ),
       'override' => array(
         'button' => 'Use default',
@@ -1177,6 +1174,7 @@ function asc_quicksites_features_views_default_views() {
       'relationship' => 'none',
     ),
   ));
+  $handler->override_option('title', '');
   $handler->override_option('header', '<div class="padded">
 <a href="<?php print base_path(); ?>events" title="Remove event filtering">See All Events</a>
 </div>');
@@ -1559,7 +1557,6 @@ function asc_quicksites_features_views_default_views() {
       ),
     ),
   ));
-  $handler->override_option('header', '');
   $handler->override_option('header_empty', 0);
   $handler->override_option('footer', '');
   $handler->override_option('items_per_page', 3);
@@ -1584,10 +1581,9 @@ function asc_quicksites_features_views_default_views() {
   $view->name = 'News';
   $view->description = 'News for ASC Sites';
   $view->tag = '';
-  $view->view_php = '';
   $view->base_table = 'node';
-  $view->is_cacheable = FALSE;
-  $view->api_version = 2;
+  $view->core = 0;
+  $view->api_version = '2';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('fields', array(
@@ -2191,8 +2187,6 @@ function asc_quicksites_features_views_default_views() {
       'relationship' => 'none',
     ),
   ));
-  $handler->override_option('title', 'News');
-  $handler->override_option('header', '');
   $handler->override_option('header_empty', 0);
   $handler->override_option('footer', '');
   $handler->override_option('use_pager', 'mini');
@@ -2494,8 +2488,6 @@ function asc_quicksites_features_views_default_views() {
       'relationship' => 'none',
     ),
   ));
-  $handler->override_option('title', 'News');
-  $handler->override_option('header', '');
   $handler->override_option('header_empty', 0);
   $handler->override_option('footer', '');
   $handler->override_option('block_description', '');
@@ -3010,7 +3002,7 @@ function asc_quicksites_features_views_default_views() {
       'relationship' => 'none',
     ),
   ));
-  $handler->override_option('css_class', 'feature-large feature-large-1');
+  $handler->override_option('css_class', 'feature-large feature-large-1 feature');
   $handler->override_option('items_per_page', 2);
   $handler->override_option('use_pager', FALSE);
   $handler->override_option('block_description', '');
@@ -3161,8 +3153,7 @@ function asc_quicksites_features_views_default_views() {
       'relationship' => 'none',
     ),
   ));
-  $handler->override_option('css_class', 'feature feature-small-2');
-  $handler->override_option('header', '');
+  $handler->override_option('css_class', ' feature-small-2');
   $handler->override_option('header_empty', 0);
   $handler->override_option('footer', '');
   $handler->override_option('items_per_page', 4);
@@ -3643,7 +3634,6 @@ function asc_quicksites_features_views_default_views() {
     ),
   ));
   $handler->override_option('css_class', 'feature feature-small-1 news-image');
-  $handler->override_option('header', '');
   $handler->override_option('header_empty', 0);
   $handler->override_option('footer', '');
   $handler->override_option('items_per_page', 2);
@@ -3670,10 +3660,9 @@ function asc_quicksites_features_views_default_views() {
   $view->name = 'People';
   $view->description = 'Directory';
   $view->tag = 'directory';
-  $view->view_php = '';
   $view->base_table = 'node';
-  $view->is_cacheable = FALSE;
-  $view->api_version = 2;
+  $view->core = 0;
+  $view->api_version = '2';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('fields', array(
@@ -3825,39 +3814,6 @@ function asc_quicksites_features_views_default_views() {
         'button' => 'Override',
       ),
     ),
-    'title' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 1,
-        'text' => '<a href="[path]" title="[title_1]">[title_1]</a>',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 0,
-      'exclude' => 0,
-      'id' => 'title',
-      'table' => 'node',
-      'field' => 'title',
-      'relationship' => 'none',
-      'override' => array(
-        'button' => 'Override',
-      ),
-    ),
     'field_ascpeople_position_value' => array(
       'label' => '',
       'alter' => array(
@@ -3894,6 +3850,39 @@ function asc_quicksites_features_views_default_views() {
       'id' => 'field_ascpeople_position_value',
       'table' => 'node_data_field_ascpeople_position',
       'field' => 'field_ascpeople_position_value',
+      'relationship' => 'none',
+      'override' => array(
+        'button' => 'Override',
+      ),
+    ),
+    'title' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 1,
+        'text' => '<a href="[path]" title="[title_1]">[title_1]</a>',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_node' => 0,
+      'exclude' => 0,
+      'id' => 'title',
+      'table' => 'node',
+      'field' => 'title',
       'relationship' => 'none',
       'override' => array(
         'button' => 'Override',
@@ -4060,10 +4049,10 @@ function asc_quicksites_features_views_default_views() {
       'field' => 'title',
       'validate_user_argument_type' => 'uid',
       'validate_user_roles' => array(
-        '2' => 0,
-        '5' => 0,
-        '4' => 0,
-        '3' => 0,
+        2 => 0,
+        5 => 0,
+        4 => 0,
+        3 => 0,
       ),
       'relationship' => 'none',
       'default_options_div_prefix' => '',
@@ -4546,8 +4535,406 @@ function asc_quicksites_features_views_default_views() {
   $handler->override_option('block_description', '');
   $handler->override_option('block_caching', -1);
   $handler = $view->new_display('page', 'People Page', 'page_1');
-  $handler->override_option('title', 'People');
-  $handler->override_option('header', '');
+  $handler->override_option('fields', array(
+    'path' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'absolute' => 0,
+      'exclude' => 1,
+      'id' => 'path',
+      'table' => 'node',
+      'field' => 'path',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+    ),
+    'field_ascpeople_first_value' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_node' => 0,
+      'label_type' => 'none',
+      'format' => 'default',
+      'multiple' => array(
+        'group' => TRUE,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => FALSE,
+      ),
+      'exclude' => 1,
+      'id' => 'field_ascpeople_first_value',
+      'table' => 'node_data_field_ascpeople_first',
+      'field' => 'field_ascpeople_first_value',
+      'relationship' => 'none',
+      'override' => array(
+        'button' => 'Override',
+      ),
+    ),
+    'title_1' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 1,
+        'text' => '[field_ascpeople_first_value] [title_1]',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_node' => 0,
+      'exclude' => 1,
+      'id' => 'title_1',
+      'table' => 'node',
+      'field' => 'title',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+    ),
+    'field_ascpeople_image_fid' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 1,
+        'text' => '<a href="[path]" title="[title_1]"><img src="[field_ascpeople_image_fid]" alt="[title_1]" title="[title_1]"/></a>',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 1,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'link_to_node' => 0,
+      'label_type' => 'none',
+      'format' => 'person_tiny_thumb_url',
+      'multiple' => array(
+        'group' => TRUE,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => FALSE,
+      ),
+      'exclude' => 0,
+      'id' => 'field_ascpeople_image_fid',
+      'table' => 'node_data_field_ascpeople_image',
+      'field' => 'field_ascpeople_image_fid',
+      'relationship' => 'none',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+    ),
+    'field_ascpeople_position_value' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'link_to_node' => 0,
+      'label_type' => 'none',
+      'format' => 'default',
+      'multiple' => array(
+        'group' => TRUE,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => FALSE,
+      ),
+      'exclude' => 1,
+      'id' => 'field_ascpeople_position_value',
+      'table' => 'node_data_field_ascpeople_position',
+      'field' => 'field_ascpeople_position_value',
+      'relationship' => 'none',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+    ),
+    'title' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 1,
+        'text' => '<a href="[path]" title="[title_1]">[title_1]</a><br />[field_ascpeople_position_value]',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'link_to_node' => 0,
+      'exclude' => 0,
+      'id' => 'title',
+      'table' => 'node',
+      'field' => 'title',
+      'relationship' => 'none',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+    ),
+    'field_ascpeople_expertise_value' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 1,
+        'text' => '[field_ascpeople_expertise_value]',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'link_to_node' => 0,
+      'label_type' => 'none',
+      'format' => 'default',
+      'multiple' => array(
+        'group' => 1,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => 0,
+      ),
+      'exclude' => 0,
+      'id' => 'field_ascpeople_expertise_value',
+      'table' => 'node_data_field_ascpeople_expertise',
+      'field' => 'field_ascpeople_expertise_value',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
+    'field_ascpeople_phone_value' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_node' => 0,
+      'label_type' => 'none',
+      'format' => 'custom_formatters_phone',
+      'multiple' => array(
+        'group' => TRUE,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => FALSE,
+      ),
+      'exclude' => 0,
+      'id' => 'field_ascpeople_phone_value',
+      'table' => 'node_data_field_ascpeople_phone',
+      'field' => 'field_ascpeople_phone_value',
+      'relationship' => 'none',
+      'override' => array(
+        'button' => 'Override',
+      ),
+    ),
+    'field_ascpeople_email_email_1' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 1,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_node' => 0,
+      'label_type' => 'none',
+      'format' => 'default',
+      'multiple' => array(
+        'group' => TRUE,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => FALSE,
+      ),
+      'exclude' => 1,
+      'id' => 'field_ascpeople_email_email_1',
+      'table' => 'node_data_field_ascpeople_email',
+      'field' => 'field_ascpeople_email_email',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+    ),
+    'field_ascpeople_email_email' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 1,
+        'text' => '<a href="mailto:[field_ascpeople_email_email_1]" title="Email [title_1]">[field_ascpeople_email_email_1]</a>',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_node' => 0,
+      'label_type' => 'none',
+      'format' => 'default',
+      'multiple' => array(
+        'group' => TRUE,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => FALSE,
+      ),
+      'exclude' => 0,
+      'id' => 'field_ascpeople_email_email',
+      'table' => 'node_data_field_ascpeople_email',
+      'field' => 'field_ascpeople_email_email',
+      'relationship' => 'none',
+      'override' => array(
+        'button' => 'Override',
+      ),
+    ),
+  ));
   $handler->override_option('header_format', '4');
   $handler->override_option('footer', '');
   $handler->override_option('footer_format', 0);
@@ -5209,10 +5596,10 @@ function asc_quicksites_features_views_default_views() {
       'field' => 'nid',
       'validate_user_argument_type' => 'uid',
       'validate_user_roles' => array(
-        '2' => 0,
-        '5' => 0,
-        '4' => 0,
-        '3' => 0,
+        2 => 0,
+        5 => 0,
+        4 => 0,
+        3 => 0,
       ),
       'override' => array(
         'button' => 'Use default',
@@ -5235,7 +5622,6 @@ function asc_quicksites_features_views_default_views() {
       'validate_argument_php' => '',
     ),
   ));
-  $handler->override_option('header', '');
   $handler->override_option('header_empty', 0);
   $handler->override_option('footer', '');
   $handler->override_option('footer_empty', 0);
@@ -5660,10 +6046,6 @@ function asc_quicksites_features_views_default_views() {
 
   $views[$view->name] = $view;
 
-
-
-
-
   // Exported view: front_page
   $view = new view;
   $view->name = 'front_page';
@@ -5785,7 +6167,7 @@ function asc_quicksites_features_views_default_views() {
         'target' => '',
         'help' => '',
         'trim' => 0,
-          'max_length' => '',
+        'max_length' => '',
         'word_boundary' => 1,
         'ellipsis' => 1,
         'html' => 0,
@@ -5815,7 +6197,7 @@ function asc_quicksites_features_views_default_views() {
       'override' => array(
         'button' => 'Override',
       ),
-        'relationship' => 'none',
+      'relationship' => 'none',
     ),
   ));
   $handler->override_option('filters', array(
@@ -5855,7 +6237,7 @@ function asc_quicksites_features_views_default_views() {
       ),
       'relationship' => 'none',
     ),
-      'status' => array(
+    'status' => array(
       'operator' => '=',
       'value' => '1',
       'group' => '0',

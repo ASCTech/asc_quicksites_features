@@ -17,11 +17,11 @@ function asc_quicksites_features_content_default_fields() {
         'format' => 'hidden',
       ),
       'teaser' => array(
-        'format' => 'default',
+        'format' => 'long',
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
+        'format' => 'long',
         'exclude' => 0,
       ),
       '4' => array(
@@ -63,12 +63,12 @@ function asc_quicksites_features_content_default_fields() {
       'default_value_code2' => '',
       'input_format' => 'F j, Y - g:ia',
       'input_format_custom' => '',
-      'increment' => '15',
+      'increment' => '1',
       'text_parts' => array(),
       'year_range' => '-3:+3',
       'label_position' => 'above',
       'label' => 'Date',
-      'weight' => '-1',
+      'weight' => '-2',
       'description' => '',
       'type' => 'date_popup',
       'module' => 'date',
@@ -90,7 +90,7 @@ function asc_quicksites_features_content_default_fields() {
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'custom_formatters_image_alt',
+        'format' => 'image_plain',
         'exclude' => 0,
       ),
       '4' => array(
@@ -125,8 +125,8 @@ function asc_quicksites_features_content_default_fields() {
       'progress_indicator' => 'bar',
       'max_filesize_per_file' => '',
       'max_filesize_per_node' => '',
-      'max_resolution' => 0,
-      'min_resolution' => 0,
+      'max_resolution' => '0',
+      'min_resolution' => '75x75',
       'alt' => '',
       'custom_alt' => 0,
       'title' => '',
@@ -135,7 +135,7 @@ function asc_quicksites_features_content_default_fields() {
       'default_image' => NULL,
       'use_default_image' => 0,
       'label' => 'Event Image',
-      'weight' => '-2',
+      'weight' => '-3',
       'description' => '',
       'type' => 'imagefield_crop_widget',
       'module' => 'imagefield_crop',
@@ -194,7 +194,7 @@ function asc_quicksites_features_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Location',
-      'weight' => '1',
+      'weight' => '-1',
       'description' => '',
       'type' => 'text_textfield',
       'module' => 'text',
@@ -216,7 +216,7 @@ function asc_quicksites_features_content_default_fields() {
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'long',
+        'format' => 'news_format',
         'exclude' => 0,
       ),
       '4' => array(
@@ -275,7 +275,7 @@ function asc_quicksites_features_content_default_fields() {
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'custom_formatters_image_alt',
+        'format' => 'image_plain',
         'exclude' => 0,
       ),
       '4' => array(
@@ -310,8 +310,8 @@ function asc_quicksites_features_content_default_fields() {
       'progress_indicator' => 'bar',
       'max_filesize_per_file' => '',
       'max_filesize_per_node' => '',
-      'max_resolution' => 0,
-      'min_resolution' => 0,
+      'max_resolution' => '0',
+      'min_resolution' => '75x75',
       'alt' => '',
       'custom_alt' => 0,
       'title' => '',
@@ -324,6 +324,69 @@ function asc_quicksites_features_content_default_fields() {
       'description' => '',
       'type' => 'imagefield_crop_widget',
       'module' => 'imagefield_crop',
+    ),
+  );
+
+  // Exported field: field_ascnews_teaser
+  $fields['qs_news-field_ascnews_teaser'] = array(
+    'field_name' => 'field_ascnews_teaser',
+    'type_name' => 'qs_news',
+    'display_settings' => array(
+      'weight' => '-2',
+      'parent' => '',
+      'label' => array(
+        'format' => 'hidden',
+      ),
+      'teaser' => array(
+        'format' => 'hidden',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'hidden',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '300',
+    'allowed_values' => '',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'rows' => '5',
+      'size' => 60,
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+          '_error_element' => 'default_value_widget][field_ascnews_teaser][0][value',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Teaser',
+      'weight' => '-2',
+      'description' => '',
+      'type' => 'text_textarea',
+      'module' => 'text',
     ),
   );
 
@@ -356,7 +419,7 @@ function asc_quicksites_features_content_default_fields() {
     'multiple' => '0',
     'module' => 'text',
     'active' => '1',
-    'text_processing' => '0',
+    'text_processing' => '1',
     'max_length' => '',
     'allowed_values' => '',
     'allowed_values_php' => '',
@@ -366,7 +429,6 @@ function asc_quicksites_features_content_default_fields() {
       'default_value' => array(
         '0' => array(
           'value' => '',
-          'format' => '1',
           '_error_element' => 'default_value_widget][field_ascpeople_address][0][value',
         ),
       ),
@@ -866,10 +928,9 @@ function asc_quicksites_features_content_default_fields() {
     'field_name' => 'field_ascpeople_phone',
     'type_name' => 'qs_people',
     'display_settings' => array(
-      'weight' => '1',
-      'parent' => '',
       'label' => array(
-        'format' => 'inline',
+        'format' => 'above',
+        'exclude' => 0,
       ),
       'teaser' => array(
         'format' => 'default',
@@ -888,6 +949,10 @@ function asc_quicksites_features_content_default_fields() {
         'exclude' => 0,
       ),
       '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -995,6 +1060,7 @@ function asc_quicksites_features_content_default_fields() {
   t('Person Image');
   t('Phone Number');
   t('Position');
+  t('Teaser');
   t('Web Site Link');
 
   return $fields;
