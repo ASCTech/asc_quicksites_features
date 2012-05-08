@@ -424,7 +424,7 @@ function asc_quicksites_features_views_default_views() {
   ));
   $handler->override_option('title', 'Events');
   $handler->override_option('header_format', '1');
-  $handler->override_option('header_empty', 1);
+  $handler->override_option('header_empty', 0);
   $handler->override_option('footer', '<a href="events" title="Events page" class="calendarLink">More Events</a>');
   $handler->override_option('footer_format', '1');
   $handler->override_option('footer_empty', 1);
@@ -1179,7 +1179,6 @@ function asc_quicksites_features_views_default_views() {
 <a href="<?php print base_path(); ?>events" title="Remove event filtering">See All Events</a>
 </div>');
   $handler->override_option('header_format', '4');
-  $handler->override_option('header_empty', 0);
   $handler->override_option('footer', '');
   $handler->override_option('use_pager', '0');
   $handler->override_option('style_plugin', 'calendar_style');
@@ -1557,7 +1556,6 @@ function asc_quicksites_features_views_default_views() {
       ),
     ),
   ));
-  $handler->override_option('header_empty', 0);
   $handler->override_option('footer', '');
   $handler->override_option('items_per_page', 3);
   $handler->override_option('offset', 2);
@@ -1891,7 +1889,7 @@ function asc_quicksites_features_views_default_views() {
   ));
   $handler->override_option('title', 'News');
   $handler->override_option('header_format', '1');
-  $handler->override_option('header_empty', 1);
+  $handler->override_option('header_empty', 0);
   $handler->override_option('footer', '<a href="news" title="News page">Recent News</a>');
   $handler->override_option('footer_format', '1');
   $handler->override_option('footer_empty', 0);
@@ -2190,7 +2188,6 @@ function asc_quicksites_features_views_default_views() {
       'relationship' => 'none',
     ),
   ));
-  $handler->override_option('header_empty', 0);
   $handler->override_option('footer', '');
   $handler->override_option('use_pager', 'mini');
   $handler->override_option('path', 'news');
@@ -2491,7 +2488,6 @@ function asc_quicksites_features_views_default_views() {
       'relationship' => 'none',
     ),
   ));
-  $handler->override_option('header_empty', 0);
   $handler->override_option('footer', '');
   $handler->override_option('block_description', '');
   $handler->override_option('block_caching', -1);
@@ -3172,7 +3168,6 @@ function asc_quicksites_features_views_default_views() {
     ),
   ));
   $handler->override_option('css_class', ' feature-small-2');
-  $handler->override_option('header_empty', 0);
   $handler->override_option('footer', '');
   $handler->override_option('items_per_page', 4);
   $handler->override_option('offset', 2);
@@ -3652,7 +3647,6 @@ function asc_quicksites_features_views_default_views() {
     ),
   ));
   $handler->override_option('css_class', 'feature feature-small-1 news-image');
-  $handler->override_option('header_empty', 0);
   $handler->override_option('footer', '');
   $handler->override_option('items_per_page', 2);
   $handler->override_option('offset', 1);
@@ -4159,8 +4153,8 @@ function asc_quicksites_features_views_default_views() {
     'type' => 'none',
   ));
   $handler->override_option('title', 'People');
-  $handler->override_option('header_format', '1');
-  $handler->override_option('header_empty', 1);
+  $handler->override_option('header_format', '4');
+  $handler->override_option('header_empty', 0);
   $handler->override_option('footer', '<a href="directory" title="People page">A-Z Directory</a>');
   $handler->override_option('footer_format', '1');
   $handler->override_option('footer_empty', 1);
@@ -4953,7 +4947,6 @@ function asc_quicksites_features_views_default_views() {
       ),
     ),
   ));
-  $handler->override_option('header_format', '4');
   $handler->override_option('footer', '');
   $handler->override_option('footer_format', 0);
   $handler->override_option('footer_empty', FALSE);
@@ -5017,7 +5010,7 @@ function asc_quicksites_features_views_default_views() {
   $handler->override_option('exposed_block', TRUE);
   $handler->override_option('path', 'directory');
   $handler->override_option('menu', array(
-    'type' => 'normal',
+    'type' => 'none',
     'title' => 'People',
     'description' => '',
     'weight' => '0',
@@ -5113,8 +5106,6 @@ function asc_quicksites_features_views_default_views() {
    <ul><li class="views-row views-row-0 views-row-even"><span class="field-content"><a href="/directory?filter=All" class="views-processed<?php echo !$_GET[\'filter\'] || $_GET[\'filter\'] == "All" ? " selected" : \'\';?>" title="Show people from all groups">All</a></span></li></ul>
   </div>
 </div>');
-  $handler->override_option('header_format', '4');
-  $handler->override_option('header_empty', 0);
   $handler->override_option('footer', '<br class="clear"/>');
   $handler->override_option('footer_empty', 0);
   $handler->override_option('style_plugin', 'list');
@@ -5640,7 +5631,6 @@ function asc_quicksites_features_views_default_views() {
       'validate_argument_php' => '',
     ),
   ));
-  $handler->override_option('header_empty', 0);
   $handler->override_option('footer', '');
   $handler->override_option('footer_empty', 0);
   $handler->override_option('block_description', '');
