@@ -1903,7 +1903,7 @@ function asc_quicksites_features_views_default_views() {
   $handler->override_option('footer_format', '1');
   $handler->override_option('footer_empty', 0);
   $handler->override_option('items_per_page', 7);
-  $handler->override_option('use_pager', '1');
+  $handler->override_option('use_pager', '0');
   $handler->override_option('row_options', array(
     'inline' => array(),
     'separator' => '',
