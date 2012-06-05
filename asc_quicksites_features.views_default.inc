@@ -2210,7 +2210,6 @@ function asc_quicksites_features_views_default_views() {
     ),
   ));
   $handler->override_option('footer', '');
-  $handler->override_option('use_pager', '0');
   $handler->override_option('path', 'news');
   $handler->override_option('menu', array(
     'type' => 'none',
