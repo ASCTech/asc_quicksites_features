@@ -11,7 +11,7 @@ function asc_quicksites_features_user_default_permissions() {
     'name' => 'display site configuration menu',
     'roles' => array(
       '0' => 'Content Manager',
-      '1' => 'Site Administrator',
+      '1' => 'superuser',
     ),
   );
 
