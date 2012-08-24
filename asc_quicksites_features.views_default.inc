@@ -1131,8 +1131,8 @@ function asc_quicksites_features_views_default_views() {
       'default_options_div_prefix' => '',
       'default_argument_user' => 0,
       'default_argument_fixed' => '',
-      'default_argument_php' => 'if(arg(1) != \'\') { 
-return intval(substr(arg(1),0,4)); 
+      'default_argument_php' => 'if(arg(1) == \'2013\') { 
+return 2012; 
 } else { 
 return date_format(date_now(), \'Y\');
 }',
